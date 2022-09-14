@@ -191,14 +191,12 @@ h1 {
 }
 
 .container_photos {
-  border: 3px solid red;
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-bottom: 2rem;
 }
 .container_photos_card {
-  border: 3px solid blue;
   gap: 1;
   display: block;
   bottom: 0;
@@ -210,13 +208,10 @@ h1 {
   bottom: 100px;
 }
 .container_photos_card_top {
-  border: 3px solid green;
   position: relative;
-  margin-bottom: 1rem;
   bottom: 0;
 }
 .container_photos_card_top_hoverLinks {
-  border: 3px solid magenta;
   position: absolute;
   width: 100%;
   text-align: center;

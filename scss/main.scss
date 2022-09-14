@@ -4,7 +4,6 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0 0;
 }
-
 .header {
   background-color: $header-color;
   font-size: small;
@@ -33,11 +32,9 @@ body {
   justify-content: space-between;
   margin: 0 9%;
   font-size: small;
-
   &_logo {
     align-self: center;
   }
-
   &_menu {
     display: flex;
     justify-content: space-between;
@@ -46,7 +43,6 @@ body {
     color: black;
     font-weight: 500;
     transition: all 300ms ease-in-out;
-
     a {
       text-decoration: none;
       color: black;
@@ -90,7 +86,6 @@ body {
       }
     }
   }
-
   &_icons {
     display: flex;
     gap: 1em;
@@ -102,7 +97,6 @@ body {
       text-decoration: none;
       color: black;
     }
-
     .ti-shopping-cart {
       position: relative;
       // .counter {
@@ -133,7 +127,6 @@ body {
         padding: 0.2rem;
       }
     }
-
     .ti-heart {
       position: relative;
       .counter {
@@ -150,7 +143,6 @@ body {
         padding: 0.2rem;
       }
     }
-
     .ti-shopping-cart:hover,
     .ti-heart:hover {
       background-color: transparent;
@@ -158,7 +150,6 @@ body {
     }
   }
 }
-
 .banner {
   background-image: url(https://demo.themeies.com/silon/images/bg-1.jpg);
   display: flex;
@@ -216,22 +207,20 @@ h1 {
   text-align: center;
   line-height: 7rem;
 }
-
 .container_photos {
-  border: 3px solid red;
+  // border: 3px solid red;
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-bottom: 2rem;
-
+  
   &_card {
-    border: 3px solid blue;
+    // border: 3px solid blue;
     gap: 1;
     display: block;
     bottom: 0;
     position: relative;
     visibility: visible;
-
     &:hover &_top_hoverLinks {
       visibility: visible;
       // opacity: 1;
@@ -239,23 +228,18 @@ h1 {
     }
 
     &_top {
-      border: 3px solid green;
+      // border: 3px solid green;
       position: relative;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       bottom: 0;
-
       &_hoverLinks {
-        border: 3px solid magenta;
+        // border: 3px solid magenta;
         position: absolute;
         width: 100%;
         text-align: center;
         visibility: hidden;
         bottom: 0;
-
         transition: bottom 400ms ease;
-
-        // bottom: 100px;
-
         a {
           text-decoration: none;
           color: black;
@@ -263,7 +247,6 @@ h1 {
           background-color: white;
           padding: 1rem;
           // visibility: visible;
-
           &:hover {
             background-color: #ff5353;
             color: white;
@@ -271,7 +254,6 @@ h1 {
         }
       }
     }
-
     &_bottom {
       // border: 3px solid red;
       display: flex;
@@ -279,7 +261,6 @@ h1 {
       align-items: center;
       line-height: 1.5rem;
       font-size: 1rem;
-
       a {
         font-weight: 100;
         line-height: 2rem;
@@ -290,13 +271,11 @@ h1 {
           color: #ff5353;
         }
       }
-
       p {
         font-size: 1.2rem;
         font-weight: 500;
         margin-top: 0.5rem;
       }
-
       &_rating {
         box-sizing: border-box;
         // width: max-content;
@@ -311,7 +290,6 @@ h1 {
     // }
   }
 }
-
 .banner2 {
   display: flex;
   justify-content: center;
@@ -352,18 +330,15 @@ h1 {
     box-sizing: border-box;
   }
 }
-
 .footer {
   // border: 3px solid red;
   background-color: #e9e2d8;
   display: grid;
   grid-template-rows: 5fr 1fr;
-
   &_top {
     // border-bottom: 1px solid #888;
     display: flex;
     justify-content: space-evenly;
-
     &_links {
       // border-bottom: 2px solid green;
       display: flex;
@@ -402,12 +377,10 @@ h1 {
       display: flex;
       flex-direction: column;
       margin-bottom: 3rem;
-
       h6 {
         font-size: 1em;
         font-weight: 500;
       }
-
       hr:only-of-type {
         margin-top: 2rem;
       }
@@ -416,7 +389,6 @@ h1 {
         display: flex;
         justify-content: center;
         gap: 0.4rem;
-
         &_android {
           // border: 3px solid green;
           display: flex;
@@ -480,11 +452,9 @@ h1 {
           }
         }
       }
-
       &_appIcons {
         // border: 3px solid #888;
         margin: 0;
-
         a {
           text-decoration: none;
           color: black;
@@ -503,18 +473,15 @@ h1 {
       }
     }
   }
-
   &_bottom {
     text-align: center;
     color: #888;
     font-weight: 300;
-
     hr {
       width: 78vw;
       text-align: center;
       // box-sizing: border-box;
     }
-
     span {
       color: red;
     }
