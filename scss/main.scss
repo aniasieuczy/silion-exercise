@@ -1,4 +1,5 @@
 $header-color: #fef7f6;
+$orange-hover: #ff5353;
 
 // * {
 //   box-sizing: border-box;
@@ -7,6 +8,14 @@ $header-color: #fef7f6;
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    color: $orange-hover;
+  }
 }
 
 .header {
@@ -46,18 +55,11 @@ body {
     font-weight: 500;
     transition: all 300ms ease-in-out;
     a {
-      text-decoration: none;
-      color: black;
       display: inline-block;
-      transition: all 300ms ease-in-out;
     }
     li a {
       padding: 1rem;
-      box-sizing: border-box;
-      &:hover {
-        color: #ff5353;
-        transition: all 300ms ease-in-out;
-      }
+      // box-sizing: border-box;
     }
     ul {
       display: inline;
@@ -157,12 +159,10 @@ body {
       margin-top: 0;
     }
     a {
-      background-color: #ff5353;
-      text-decoration: none;
+      background-color:  $orange-hover;
       color: white;
       padding: 1rem 3rem;
       align-self: center;
-      transition: all 300ms ease-in-out;
     }
     a:hover {
       background-color: white;
@@ -173,7 +173,6 @@ body {
     width: 50%;
     height: auto;
     img {
-      // object-fit: contain;
       width: 100%;
       height: auto;
     }
@@ -192,10 +191,7 @@ body {
   margin-bottom: 4rem;
   &_card {
     position: relative;
-    // bottom: 50px;
     visibility: visible;
-    // width: 100%;
-    // height: auto;
     &:first-of-type {
       margin-left: 3rem;
     }
@@ -209,7 +205,6 @@ body {
     &_top {
       width: 100%;
       height: auto;
-      // margin-bottom: 1rem;
       bottom: 50%;
       img {
         width: 100%;
@@ -228,7 +223,7 @@ body {
           background-color: white;
           padding: 1rem;
           &:hover {
-            background-color: #ff5353;
+            background-color: $orange-hover;
             color: white;
           }
         }
@@ -243,12 +238,6 @@ body {
       a {
         font-weight: 100;
         line-height: 2rem;
-        transition: all 300ms ease-in-out;
-        text-decoration: none;
-        color: black;
-        &:hover {
-          color: #ff5353;
-        }
       }
       p {
         font-size: 1.2rem;
@@ -289,14 +278,10 @@ body {
       text-align: center;
     }
     a {
-      // box-sizing: border-box;
       background-color: #ff5353;
-      text-decoration: none;
       color: white;
-      width: fit-content;
       padding: 1rem 3rem;
       align-self: center;
-      transition: all 300ms ease-in-out;
     }
     a:hover {
       background-color: white;
@@ -304,11 +289,9 @@ body {
     }
   }
   &_photo {
-    // box-sizing: border-box;
     height: auto;
     width: 50%;
     img {
-      object-fit: cover;
       width: 100%;
       height: auto;
     }
@@ -319,51 +302,42 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-items: flex-start;
   &_top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: start;
     margin: 3rem 1rem;
+    h5 {
+      color: black;
+      font-size: 1rem;
+      font-weight: 500;
+    }
     &_links {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      h5 {
-        color: black;
-        font-size: 1rem;
-        font-weight: 500;
-      }
+      // justify-content: center;
       a {
-        text-decoration: none;
         color: #888;
-        font-size: 0.9rem;
-        font-weight: 400;
         &:hover {
-          color: #ff5353;
+          color:  $orange-hover;
         }
       }
       ul {
-        color: #888;
         list-style: none;
-        margin-top: 1rem;
+        margin: 0 0;
         padding-left: 0;
-        // line-height: 1.5rem;
-        font-weight: 300;
+        font-size: 0.9rem;
+        font-weight: 400;
       }
       li {
-        text-align: left;
-      
-      }
-      ul li {
-        margin: 0.8rem 1rem;
+        margin: 0.8rem 0rem;
       }
     }
     &_widget {
       display: flex;
       flex-direction: column;
       align-content: center;
-      
+
       h6 {
         font-size: 1rem;
         font-weight: 500;
@@ -385,7 +359,7 @@ body {
           transition: background-color 300ms;
           text-align: left;
           .ti-android {
-            color: #ff5353;
+            color:  $orange-hover;
             font-size: 1.5rem;
           }
           p {
@@ -402,7 +376,7 @@ body {
             margin-top: 0;
           }
           &:hover {
-            background-color: #ff5353;
+            background-color:  $orange-hover;
             color: white;
             .ti-android {
               color: white;
@@ -415,7 +389,7 @@ body {
           gap: 0.5rem;
           padding: 0rem 0.8rem;
           border-radius: 5px;
-          background-color: #ff5353;
+          background-color:  $orange-hover;
           color: white;
           .ti-apple {
             font-size: 1.5rem;
@@ -447,7 +421,8 @@ body {
           transition: background-color 300ms;
         }
         a:hover {
-          background-color: #ff5353;
+          background-color:  $orange-hover;
+          color: white;
         }
       }
     }
@@ -521,8 +496,8 @@ body {
       }
     }
   }
-  .footer{
-    &_top_widget_appBtn{
+  .footer {
+    &_top_widget_appBtn {
       flex-direction: column;
     }
   }
@@ -562,19 +537,15 @@ body {
   .footer {
     &_top {
       grid-template-columns: 1fr 1fr;
-      padding: 3rem 2rem;
       align-self: center;
       &_links {
         justify-content: center;
-        margin: 0.5rem;
       }
       &_widget {
-        margin: 0.5rem;
-        &_appBtn{
+        &_appBtn {
           flex-direction: row;
         }
       }
-      
     }
   }
 }
@@ -629,17 +600,18 @@ body {
   .footer {
     align-self: start;
     &_top {
-      width: 100%;
       grid-template-columns: 1fr;
       align-self: start;
-      padding: 0;
-      margin: 0;
-      &_widget_appIcons {
-        margin: 1rem;
-        &_android,
-        &_apple {
-          width: 50%;
-          align-items: stretch;
+      // width: -webkit-fill-available;
+      &_widget {
+        // &_appBtn {
+        //   &_android,
+        //   &_apple {
+        //     width: 50%;
+        //   }
+        // }
+        &_appIcons{
+          margin-top: 1rem;
         }
       }
     }
