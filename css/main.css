@@ -311,18 +311,18 @@ body {
   background-color: #e9e2d8;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .footer_top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  margin: 0 1rem;
+  align-items: start;
+  margin: 3rem 1rem;
 }
 .footer_top_links {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3rem 1rem;
 }
 .footer_top_links h5 {
   color: black;
@@ -341,19 +341,15 @@ body {
 .footer_top_links ul {
   color: #888;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5rem;
+  margin-top: 1rem;
+  padding-left: 0;
   font-weight: 300;
 }
 .footer_top_links li {
   text-align: left;
 }
-.footer_top_links li:first-of-type {
-  margin-top: 0.5rem;
-}
 .footer_top_links ul li {
-  margin: 0.3rem 1rem;
+  margin: 0.8rem 1rem;
 }
 .footer_top_widget {
   display: flex;
@@ -361,7 +357,7 @@ body {
   align-content: center;
 }
 .footer_top_widget h6 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 500;
 }
 .footer_top_widget hr:only-of-type {
@@ -445,9 +441,9 @@ body {
   color: #888;
   font-weight: 400;
   font-size: 0.9rem;
+  width: 75%;
 }
 .footer_bottom hr {
-  width: 94%;
   text-align: center;
 }
 .footer_bottom span {
@@ -496,6 +492,9 @@ body {
   .container_photos_card_bottom_rating span {
     font-size: 0.8rem;
   }
+  .footer_top_widget_appBtn {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -539,6 +538,9 @@ body {
   .footer_top_widget {
     margin: 0.5rem;
   }
+  .footer_top_widget_appBtn {
+    flex-direction: row;
+  }
 }
 @media (max-width: 575px) {
   .header {
@@ -568,7 +570,7 @@ body {
   }
   .container_photos {
     flex-direction: column;
-    margin: 0 0;
+    margin: 0 1rem;
   }
   .container_photos_card:first-child {
     margin-left: 0;
@@ -583,6 +585,7 @@ body {
     align-self: start;
   }
   .footer_top {
+    width: 100%;
     grid-template-columns: 1fr;
     align-self: start;
     padding: 0;
@@ -592,6 +595,7 @@ body {
     margin: 1rem;
   }
   .footer_top_widget_appIcons_android, .footer_top_widget_appIcons_apple {
+    width: 50%;
     align-items: stretch;
   }
 }

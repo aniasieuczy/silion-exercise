@@ -318,17 +318,17 @@ body {
   background-color: #e9e2d8;
   display: flex;
   flex-direction: column;
+  align-items: center;
   // justify-items: flex-start;
   &_top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    margin: 0 1rem;
+    align-items: start;
+    margin: 3rem 1rem;
     &_links {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 3rem 1rem;
       h5 {
         color: black;
         font-size: 1rem;
@@ -346,28 +346,26 @@ body {
       ul {
         color: #888;
         list-style: none;
-        margin: 0;
-        padding: 0;
-        line-height: 1.5rem;
+        margin-top: 1rem;
+        padding-left: 0;
+        // line-height: 1.5rem;
         font-weight: 300;
       }
       li {
         text-align: left;
+      
       }
-      li:first-of-type {
-        margin-top: 0.5rem;
-      }
-
       ul li {
-        margin: 0.3rem 1rem;
+        margin: 0.8rem 1rem;
       }
     }
     &_widget {
       display: flex;
       flex-direction: column;
       align-content: center;
+      
       h6 {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 500;
       }
       hr:only-of-type {
@@ -459,8 +457,8 @@ body {
     color: #888;
     font-weight: 400;
     font-size: 0.9rem;
+    width: 75%;
     hr {
-      width: 94%;
       text-align: center;
     }
     span {
@@ -523,6 +521,11 @@ body {
       }
     }
   }
+  .footer{
+    &_top_widget_appBtn{
+      flex-direction: column;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -567,7 +570,11 @@ body {
       }
       &_widget {
         margin: 0.5rem;
+        &_appBtn{
+          flex-direction: row;
+        }
       }
+      
     }
   }
 }
@@ -605,7 +612,7 @@ body {
 
   .container_photos {
     flex-direction: column;
-    margin: 0 0;
+    margin: 0 1rem;
     &_card {
       &:first-child {
         margin-left: 0;
@@ -622,6 +629,7 @@ body {
   .footer {
     align-self: start;
     &_top {
+      width: 100%;
       grid-template-columns: 1fr;
       align-self: start;
       padding: 0;
@@ -630,6 +638,7 @@ body {
         margin: 1rem;
         &_android,
         &_apple {
+          width: 50%;
           align-items: stretch;
         }
       }
