@@ -1,10 +1,6 @@
 $header-color: #fef7f6;
 $orange-hover: #ff5353;
 
-// * {
-//   box-sizing: border-box;
-// }
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 0;
@@ -59,7 +55,6 @@ a {
     }
     li a {
       padding: 1rem;
-      // box-sizing: border-box;
     }
     ul {
       display: inline;
@@ -121,6 +116,7 @@ a {
       }
     }
 
+    .ti-search:hover,
     .ti-shopping-cart:hover,
     .ti-heart:hover {
       background-color: transparent;

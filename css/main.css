@@ -117,6 +117,7 @@ a:hover {
   font-size: xx-small;
   padding: 0.2rem;
 }
+.nav_icons .ti-search:hover,
 .nav_icons .ti-shopping-cart:hover,
 .nav_icons .ti-heart:hover {
   background-color: transparent;
