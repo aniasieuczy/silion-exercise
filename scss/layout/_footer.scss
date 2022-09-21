@@ -1,0 +1,124 @@
+.footer {
+    @include setFlex (column, center);
+    background-color: $beige-background;
+    align-items: center;
+    &_top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: start;
+      margin: 3rem 1rem;
+      h5 {
+        color: black;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      &_links {
+        @include setFlex(column, center);
+        a {
+          color: #888;
+          &:hover {
+            color:  $orange-hover;
+          }
+        }
+        ul {
+          list-style: none;
+          margin: 0 0;
+          padding-left: 0;
+          font-size: 0.9rem;
+          font-weight: 400;
+        }
+        li {
+          margin: 0.8rem 0rem;
+        }
+      }
+      &_widget {
+        align-content: center;
+        h6 {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        hr:only-of-type {
+          margin-top: 1rem;
+        }
+        &_appBtn {
+          @include setFlex(row, center);
+          gap: 0.4rem;
+          &_android {
+            @include setFlex (row, center);
+            @include appBtnStyles;
+            background-color: white;
+            transition: background-color 300ms;
+            text-align: left;
+            .ti-android {
+              color:  $orange-hover;
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: x-small;
+            }
+            p:first-of-type {
+              margin-bottom: 0;
+              font-size: 0.6rem;
+            }
+            p:nth-of-type(2) {
+              font-weight: 500;
+              font-size: 0.8rem;
+              margin-top: 0;
+            }
+            &:hover {
+              background-color: $orange-hover;
+              color: $primary-white;
+              .ti-android {
+                color: $primary-white;
+              }
+            }
+          }
+          &_apple {
+            @include setFlex(row, center);
+            @include appBtnStyles;
+            background-color: $orange-hover;
+            color: white;
+            .ti-apple {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: x-small;
+            }
+            p:first-of-type {
+              margin-bottom: 0;
+              font-size: 0.6rem;
+            }
+            p:nth-of-type(2) {
+              font-weight: 700;
+              font-size: 0.8rem;
+              margin-top: 0;
+            }
+          }
+        }
+        &_appIcons {
+          a {
+            background-color: white;
+            padding: 0.5rem;
+            margin: 0 0.25rem;
+          }
+          a:hover {
+            background-color: $orange-hover;
+            color: white;
+          }
+        }
+      }
+    }
+    &_bottom {
+      text-align: center;
+      color: #888;
+      font-weight: 400;
+      font-size: 0.9rem;
+      width: 75%;
+      hr {
+        text-align: center;
+      }
+      span {
+        color: $red;
+      }
+    }
+  }

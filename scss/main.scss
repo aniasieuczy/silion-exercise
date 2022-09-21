@@ -1,148 +1,38 @@
-$header-color: #fef7f6;
-$orange-hover: #ff5353;
+@use './variables' as *;
+@use './mixins' as *;
 
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 0;
 }
-a {
+.links {
   text-decoration: none;
-  color: black;
+  color: $primary-black;
   transition: all 300ms ease-in-out;
   &:hover {
     color: $orange-hover;
   }
 }
 
-.header {
-  background-color: $header-color;
-  display: flex;
-  justify-content: space-between;
-  font-size: small;
-  font-weight: 300;
-  padding: 0.15rem 5%;
-  &-top-left {
-    display: flex;
-    gap: 2rem;
-    margin-left: 5%;
-  }
-  &-top-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    margin-right: 5%;
-  }
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 9%;
-  font-size: small;
-  &_logo {
-    align-self: center;
-  }
-  &_menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    color: black;
-    font-weight: 500;
-    transition: all 300ms ease-in-out;
-    a {
-      display: inline-block;
-    }
-    li a {
-      padding: 1rem;
-    }
-    ul {
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
-    ul li {
-      display: inline-block;
-      &:hover ul {
-        display: block;
-      }
-    }
-    ul li ul {
-      position: absolute;
-      width: 200px;
-      display: none;
-      padding: 1.3% 0;
-    }
-    ul li ul li {
-      display: block;
-    }
-    ul li ul li a {
-      display: block;
-      background-color: white;
-      transition: background-color 300ms;
-      &:hover {
-        background-color: #f5f5f5;
-      }
-    }
-  }
-  &_icons {
-    display: flex;
-    gap: 1em;
-    padding: 2rem 2rem;
-    font-size: 1.2rem;
-    a:first-of-type {
-      display: none;
-    }
-    a {
-      position: relative;
-      text-decoration: none;
-      color: black;
-    }
-    .ti-shopping-cart,
-    .ti-heart {
-      position: relative;
-      .counter {
-        width: 10px;
-        height: 10px;
-        color: white;
-        background-color: #ff5353;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 15px;
-        left: 14px;
-        text-align: center;
-        font-size: xx-small;
-        padding: 0.2rem;
-      }
-    }
+@import './layout/header';
 
-    .ti-search:hover,
-    .ti-shopping-cart:hover,
-    .ti-heart:hover {
-      background-color: transparent;
-      color: #ff5353;
-    }
-  }
-}
+@import './layout/nav';
+
 .banner {
+  @include setFlex(row, center);
+  align-items: center;
   background-image: url(https://demo.themeies.com/silon/images/bg-1.jpg);
   background-position: center;
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
   &_left {
+    @include setFlex(column, center);
+    flex-wrap: wrap;
     width: 50%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
     h1 {
       text-align: center;
-      color: #565656;
+      color: $grey-text-banner;
       font-size: 1rem;
       letter-spacing: 0.25rem;
       font-weight: 500;
@@ -155,14 +45,14 @@ a {
       margin-top: 0;
     }
     a {
-      background-color:  $orange-hover;
-      color: white;
+      background-color: $orange-hover;
+      color: $primary-white;
       padding: 1rem 3rem;
       align-self: center;
     }
     a:hover {
-      background-color: white;
-      color: #007bff;
+      background-color: $primary-white;
+      color: $blue-hover-buttons;
     }
   }
   &_right {
@@ -181,8 +71,7 @@ a {
   padding: 3rem 0;
 }
 .container_photos {
-  display: flex;
-  justify-content: center;
+  @include setFlex(row, center);
   gap: 3rem;
   margin-bottom: 4rem;
   &_card {
@@ -196,12 +85,12 @@ a {
     }
     &:hover &_top_hoverLinks {
       visibility: visible;
-      bottom: 40%;
+      bottom: 12rem;
     }
     &_top {
       width: 100%;
       height: auto;
-      bottom: 50%;
+      bottom: 20rem;
       img {
         width: 100%;
       }
@@ -210,24 +99,21 @@ a {
         width: 100%;
         text-align: center;
         visibility: hidden;
-        bottom: 20%;
+        bottom: 0rem;
         transition: bottom 300ms ease-in-out;
         a {
-          text-decoration: none;
-          color: black;
           border-radius: 50%;
-          background-color: white;
+          background-color: $primary-white;
           padding: 1rem;
           &:hover {
             background-color: $orange-hover;
-            color: white;
+            color: $primary-white;
           }
         }
       }
     }
     &_bottom {
-      display: flex;
-      flex-direction: column;
+      @include setFlex(column, center);
       align-items: center;
       line-height: 1.5rem;
       font-size: 1rem;
@@ -241,26 +127,20 @@ a {
         margin-top: 0.5rem;
       }
       &_rating {
-        box-sizing: border-box;
-        // width: max-content;
-        color: red;
+        color: $red;
         text-align: center;
       }
     }
   }
 }
 .banner2 {
-  display: flex;
-  justify-content: center;
+  @include setFlex(row, center);
   background-color: #e9e2d8;
-  // gap: 3;
   width: 100%;
   height: auto;
   align-items: center;
   &_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include setFlex(column, center);
     align-items: center;
     width: 50%;
     h1 {
@@ -274,14 +154,14 @@ a {
       text-align: center;
     }
     a {
-      background-color: #ff5353;
+      background-color: $orange-hover;
       color: white;
       padding: 1rem 3rem;
       align-self: center;
     }
     a:hover {
-      background-color: white;
-      color: #007bff;
+      background-color: $primary-white;
+      color: $blue-hover-buttons;
     }
   }
   &_photo {
@@ -293,150 +173,7 @@ a {
     }
   }
 }
-.footer {
-  background-color: #e9e2d8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &_top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: start;
-    margin: 3rem 1rem;
-    h5 {
-      color: black;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    &_links {
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
-      a {
-        color: #888;
-        &:hover {
-          color:  $orange-hover;
-        }
-      }
-      ul {
-        list-style: none;
-        margin: 0 0;
-        padding-left: 0;
-        font-size: 0.9rem;
-        font-weight: 400;
-      }
-      li {
-        margin: 0.8rem 0rem;
-      }
-    }
-    &_widget {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-
-      h6 {
-        font-size: 1rem;
-        font-weight: 500;
-      }
-      hr:only-of-type {
-        margin-top: 1rem;
-      }
-      &_appBtn {
-        display: flex;
-        gap: 0.4rem;
-        &_android {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0 0.8rem;
-          margin: 0 0.1rem;
-          border-radius: 5px;
-          background-color: white;
-          transition: background-color 300ms;
-          text-align: left;
-          .ti-android {
-            color:  $orange-hover;
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: x-small;
-          }
-          p:first-of-type {
-            // letter-spacing: 0.1rem;
-            margin-bottom: 0;
-            font-size: 0.6rem;
-          }
-          p:nth-of-type(2) {
-            font-weight: 500;
-            font-size: 0.8rem;
-            margin-top: 0;
-          }
-          &:hover {
-            background-color:  $orange-hover;
-            color: white;
-            .ti-android {
-              color: white;
-            }
-          }
-        }
-        &_apple {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0rem 0.8rem;
-          border-radius: 5px;
-          background-color:  $orange-hover;
-          color: white;
-          .ti-apple {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: x-small;
-          }
-          p:first-of-type {
-            // letter-spacing: 0.1rem;
-            margin-bottom: 0;
-            font-size: 0.6rem;
-          }
-          p:nth-of-type(2) {
-            font-weight: 700;
-            font-size: 0.8rem;
-            margin-top: 0;
-          }
-        }
-      }
-      &_appIcons {
-        // border-top: 1px solid #d6d8d9;
-        // margin-top: 2rem;
-        a {
-          text-decoration: none;
-          color: black;
-          background-color: white;
-          padding: 0.5rem;
-          margin: 0 0.25rem;
-          transition: background-color 300ms;
-        }
-        a:hover {
-          background-color:  $orange-hover;
-          color: white;
-        }
-      }
-    }
-  }
-  &_bottom {
-    text-align: center;
-    color: #888;
-    font-weight: 400;
-    font-size: 0.9rem;
-    width: 75%;
-    hr {
-      text-align: center;
-    }
-    span {
-      color: red;
-    }
-  }
-}
+@import './layout/footer';
 
 @media (max-width: 991px) {
   .header {
@@ -567,9 +304,6 @@ a {
   }
   .banner {
     &_left {
-      h1 {
-        color: #565656;
-      }
       h2 {
         letter-spacing: 0;
         padding: 0 2%;
